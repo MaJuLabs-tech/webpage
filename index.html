@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MajuLabs — Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0B5ED7;
+      --accent:  #2CA58D;
+      --bg-main: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --text:    #111827;
+      --muted:   #6B7280;
+      --line:    #E5E7EB;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, sans-serif;
+      background:
+        linear-gradient(135deg, rgba(11,94,215,0.04), rgba(44,165,141,0.04)),
+        var(--bg-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+    }
+
+    .wrapper {
+      max-width: 720px;
+      width: 100%;
+      padding: 64px 40px;
+    }
+
+    .logo {
+      display: block;
+      max-width: 420px;
+      width: 100%;
+      margin: 0 auto 56px auto;
+    }
+
+    .panel {
+      background: var(--bg-card);
+      border-radius: 14px;
+      padding: 40px;
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.06),
+        inset 0 0 0 1px var(--line);
+      position: relative;
+      text-align: center;
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 4px;
+      background: linear-gradient(
+        to bottom,
+        var(--primary),
+        var(--accent)
+      );
+      border-radius: 14px 0 0 14px;
+    }
+
+    .coming {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .mono {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 36px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <!-- BIG LOGO -->
+    <img src="logo.png" alt="MajuLabs logo" class="logo" />
+
+    <!-- MINIMAL MESSAGE -->
+    <div class="panel">
+      <div class="coming">Coming soon</div>
+
+      <div class="mono">
+        status: compiling ideas…<br>
+        next step → deploy
+      </div>
+    </div>
+
+    <footer>
+      © 2026 MajuLabs.tech · All rights reserved
+    </footer>
+
+  </div>
+
+</body>
+</html>
